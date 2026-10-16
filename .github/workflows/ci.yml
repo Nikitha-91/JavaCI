@@ -21,6 +21,9 @@ jobs:
           distribution: 'temurin'
           cache: maven
 
+      - name: Give Maven permission
+        run: chmod +x mvnw
+
       - name: Compile code
         run: ./mvnw -B -DskipTests compile
 
